@@ -4,7 +4,8 @@ import PokemonList from '../components/PokemonList';
 import { PokemonContext } from '../context/PokemonContext';
 
 function Home() {
-  const {onClickLoadMore, active, setActive}:any = useContext(PokemonContext)
+  const {onClickLoadNextPage, activo, setActivo}:any = useContext(PokemonContext)
+  const {onClickLoadPreviusPage, active, setActive}:any = useContext(PokemonContext)
 
   return (
 		<div>
@@ -30,8 +31,11 @@ function Home() {
 			<PokemonList />
             <FilterBar />
             <div className="container-btn-load-more container">
-                <button className='btn-load-more' onClick={onClickLoadMore}>
-                    Cargar más
+                <button className='btn-load-more' onClick={onClickLoadPreviusPage}>
+                    Anterior
+                </button>
+				<button className='btn-load-more' onClick={onClickLoadNextPage}>
+                    Siguiente
                 </button>
             </div>
 		</div>

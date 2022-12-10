@@ -78,8 +78,13 @@ function PokemonProvider({ children }) {
     getGlobalPokemons();
   }, []);
 
-  const onClickLoadMore = () => {
+  const onClickLoadNextPage = () => {
     setOffset(offset + 25);
+  };
+
+  const onClickLoadPreviusPage = () => {
+    if(offset === 0){ return }
+    setOffset(offset - 25);
   };
 
   // Filter Function + State
@@ -143,7 +148,8 @@ function PokemonProvider({ children }) {
       allPokemons,
       globalPokemons,
       getPokemonById,
-      onClickLoadMore,
+      onClickLoadNextPage,
+      onClickLoadPreviusPage,
       loading,
       setLoading,
       active,

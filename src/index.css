@@ -428,9 +428,9 @@ header form {
 
 .container-btn-load-more{
 	display: flex;
-	justify-content: center;
-
-	margin-bottom: 20px;
+	justify-content: space-around;
+	width: 500px;
+	margin-bottom: 50px;
 	margin-top: 20px;
 }
 
