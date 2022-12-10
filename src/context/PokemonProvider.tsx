@@ -11,6 +11,7 @@ function PokemonProvider({ children }) {
 
   const [loading, setLoading] = useState(true);
   const [active, setActive] = useState(false);
+  const [activo, setActivo] = useState(false);
 
   //@ts-ignore
   const { valueSearch, onInputChange, onResetForm } = useForm({
@@ -152,6 +153,8 @@ function PokemonProvider({ children }) {
       onClickLoadPreviusPage,
       loading,
       setLoading,
+      activo,
+      setActivo,
       active,
       setActive,
       handleCheckbox,
